@@ -91,7 +91,8 @@ function App() {
         };
 
         const apiKey = ""; // API 金鑰，由執行環境提供
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+        const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
+const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
         const response = await fetch(apiUrl, {
           method: 'POST',
